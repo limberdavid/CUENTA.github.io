@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIMBER | Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+    <h1>LIMBER</h1>
+</header>
+
+<main class="container">
+    <section class="card">
+        <h2>Crear Cuenta</h2>
+        <p class="subtitle">Únete y comienza ahora</p>
+
+        <form id="registrationForm" novalidate>
+
+            <div class="form-group">
+                <label>Usuario</label>
+                <input type="text" id="username" name="username" minlength="3" required>
+                <span class="error"></span>
+                <span class="ok">✔</span>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error"></span>
+                <span class="ok">✔</span>
+            </div>
+
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="password" name="password" minlength="8" required>
+                <span class="error"></span>
+                <span class="ok">✔</span>
+
+                <div class="password-meter">
+                    <div class="meter-bar" id="meterBar"></div>
+                </div>
+                <small id="meterText">Fuerza: -</small>
+            </div>
+
+            <div class="form-group">
+                <label>Confirmar contraseña</label>
+                <input type="password" id="confirmPassword" required>
+                <span class="error"></span>
+                <span class="ok">✔</span>
+            </div>
+
+            <div class="form-group">
+                <label>Teléfono (opcional)</label>
+                <input type="tel" id="phone" pattern="[0-9]{10}">
+                <span class="error"></span>
+                <span class="ok">✔</span>
+            </div>
+
+            <div class="terms">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">Acepto términos y condiciones</label>
+                <span class="error"></span>
+            </div>
+
+            <button type="submit" class="btn-submit">Registrarse</button>
+        </form>
+
+        <p class="footer-text">
+            ¿Ya tienes cuenta? <a href="#">Inicia sesión</a>
+        </p>
+    </section>
+</main>
+
+<div class="toast" id="toast">Registro exitoso</div>
+
+<script src="script.js"></script>
+</body>
+</html>
